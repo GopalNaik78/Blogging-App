@@ -3,9 +3,7 @@ package com.scaler.blogapp.comments;
 import com.scaler.blogapp.articles.ArticleEntity;
 import com.scaler.blogapp.users.UserEntity;
 import jakarta.persistence.*;
-import lombok.AccessLevel;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.lang.NonNull;
 import org.springframework.lang.Nullable;
@@ -14,7 +12,8 @@ import java.util.Date;
 
 @Entity(name = "comments")
 @Data
-
+@Builder
+@AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class CommentEntity {
     @Id

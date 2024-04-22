@@ -3,9 +3,7 @@ package com.scaler.blogapp.articles;
 import com.scaler.blogapp.users.UserEntity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Max;
-import lombok.AccessLevel;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.lang.NonNull;
 import org.springframework.lang.Nullable;
@@ -14,6 +12,8 @@ import java.util.Date;
 
 @Entity(name = "articles")
 @Data
+@Builder
+@AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class ArticleEntity {
 
