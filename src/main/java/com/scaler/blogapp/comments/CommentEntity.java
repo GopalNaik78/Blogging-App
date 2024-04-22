@@ -12,7 +12,7 @@ import org.springframework.lang.Nullable;
 
 import java.util.Date;
 
-@Entity
+@Entity(name = "comments")
 @Data
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class CommentEntity {
@@ -31,8 +31,10 @@ public class CommentEntity {
     private Date createdAt;
 
     @ManyToOne
-    @JoinColumn(name = "articleId", )
+    @JoinColumn(name = "articleId", nullable = false )
     private ArticleEntity article;
 
+    @ManyToOne
+    @JoinColumn(name = "authorId", nullable = false)
     private UserEntity author;
 }

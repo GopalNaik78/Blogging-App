@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.lang.NonNull;
 import org.springframework.lang.Nullable;
 
-@Entity
+@Entity(name = "users")
 @Data
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class UserEntity {
