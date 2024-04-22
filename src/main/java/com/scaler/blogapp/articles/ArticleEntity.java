@@ -39,6 +39,6 @@ public class ArticleEntity {
     private Date createdAt;
 
     @ManyToOne
-    @JoinColumn(name = "aothorId", nullable = false)
+    @JoinColumn(name = "authorId", nullable = false)
     private UserEntity author;
 }

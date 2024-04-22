@@ -14,6 +14,7 @@ import java.util.Date;
 
 @Entity(name = "comments")
 @Data
+
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class CommentEntity {
     @Id
