@@ -39,14 +39,20 @@ public class UsersController {
         return ResponseEntity.ok(modelMapper.map(savedUser, UserResponse.class));
     }
 
-    @ExceptionHandler({UsersService.UserNotFoundException.class})
-    ResponseEntity<ErrorResponse> handleUserNotFoundException(Exception ex){
+    @ExceptionHandler({
+            UsersService.UserNotFoundException.class,
+            UsersService.InvalidCredentialsException.class
+    })
+    ResponseEntity<ErrorResponse> handleUserException(Exception ex){
         String message;
         HttpStatus status;
         if(ex instanceof UsersService.UserNotFoundException){
             message = ex.getMessage();
             status = HttpStatus.NOT_FOUND;
-        }else {
+        } else if (ex instanceof UsersService.InvalidCredentialsException) {
+            message = ex.getMessage();
+            status = HttpStatus.UNAUTHORIZED;
+        } else{
             message = "Something went wrong";
             status = HttpStatus.INTERNAL_SERVER_ERROR;
         }
@@ -56,4 +62,6 @@ public class UsersController {
                 .build();
         return ResponseEntity.status(status).body(response);
     }
+
+
 }
