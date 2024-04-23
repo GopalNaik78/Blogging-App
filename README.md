@@ -26,6 +26,13 @@
 	    "body": "This was a great article, loved reading it!",
 	    "createdAt": "2024-03-07 06:50:42"
     }
+### Errors
+```
+{
+    "message": "User with username: ajay naik not found"
+}
+```
+
 ## API Endpoints
 ### `POST /users`
 create new user
