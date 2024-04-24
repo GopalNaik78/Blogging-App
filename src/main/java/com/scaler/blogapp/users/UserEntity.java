@@ -9,6 +9,7 @@ import org.springframework.lang.Nullable;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Builder
 public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
