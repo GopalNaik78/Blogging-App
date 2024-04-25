@@ -1,5 +1,7 @@
 package com.scaler.blogapp.articles;
 
+import com.scaler.blogapp.users.UserEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -16,7 +18,9 @@ public class ArticlesController {
     }
 
     @PostMapping("")
-    String createArticle(){
-        return "create article";
+    String createArticle(
+            @AuthenticationPrincipal UserEntity user
+    ){
+        return "create article called by " + user.getUsername();
     }
 }
