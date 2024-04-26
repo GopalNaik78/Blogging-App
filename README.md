@@ -4,8 +4,8 @@
 
     {
 	    "id": 134,
-	    "username": "AjayNaik",
-	    "email": 	"ajaynaik8971@gmail.com",
+	    "username": "GopalNaik",
+	    "email": 	"gopal@gmail.com",
 	    "bio":      "writes nice articles!",
 	    "image":    "https://i.pinimg.com/474x/66/ff/cb/66ffcb56482c64bdf6b6010687938835.jpg"
     }
@@ -29,7 +29,7 @@
 ### Errors
 ```
 {
-    "message": "User with username: ajay naik not found"
+    "message": "User with username: Gopal naik not found"
 }
 ```
 
